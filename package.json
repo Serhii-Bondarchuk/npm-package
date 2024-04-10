@@ -1,0 +1,28 @@
+{
+  "name": "npm-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "lint": "tsc"
+  },
+  "keywords": [
+    "ui-lib"
+  ],
+  "author": "S_B",
+  "license": "ISC",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "tsc-init": "^2.1.0",
+    "tsconfig": "^7.0.0",
+    "tsup": "^8.0.2"
+  }
+}
