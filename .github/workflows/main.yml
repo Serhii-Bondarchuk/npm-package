@@ -1,0 +1,25 @@
+name: Build
+on:
+  push:
+    branches:
+      - '**'
+jobs:
+  build:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout and install dependencies
+        id: checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install
+      - run: npm ci
+      - run: npm run test
+      - run: npm run coverage
+      - run: npm run lint
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

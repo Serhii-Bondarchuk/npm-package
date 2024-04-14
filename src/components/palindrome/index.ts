@@ -1,0 +1,1 @@
+export { palindrome } from "./palindrome";
