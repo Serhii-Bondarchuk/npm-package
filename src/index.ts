@@ -1,3 +1,3 @@
-export { minus, palindrome, plus } from './components'
+export { minus, palindrome, plus, stringOrNumber } from './components'
 
 
