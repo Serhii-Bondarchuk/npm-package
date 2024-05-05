@@ -265,7 +265,6 @@ export const useButtonStyles = (state: ButtonState): ButtonState => {
   // const iconBaseClassName = useIconBaseClassName();
 
   const { variant, size, fullWidth, disabled } = state;
-
   state.className = mergeClasses(
     baseClassName,
     fullWidth && fullWidthStyle.fullWidth,

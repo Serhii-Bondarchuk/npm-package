@@ -12,6 +12,7 @@ const Button = ({
   styles,
   disabled,
   id,
+  ...props
 }: ButtonType) => {
   const { className } = useButtonStyles({
     onClick,
@@ -39,6 +40,7 @@ const Button = ({
         data-test="button_test"
         id={id}
         // {...buttonAttr}
+        {...props}
       >
         {children || label}
       </button>

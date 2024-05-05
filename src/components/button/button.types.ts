@@ -1,6 +1,8 @@
 import { CSSProperties, PropsWithChildren } from "react";
 
-export type ButtonProps = {
+export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & OwnButtonProps;
+
+export type OwnButtonProps = {
   onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'danger';
   size?: 'small' | 'large';
