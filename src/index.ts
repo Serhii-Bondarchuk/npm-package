@@ -1,3 +1,4 @@
-export { minus, palindrome, plus, stringOrNumber } from './components'
+export * from './components'
 
-
+import './app.css'
+import 'minireset.css'
